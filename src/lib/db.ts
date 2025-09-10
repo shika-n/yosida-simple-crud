@@ -7,6 +7,6 @@ const pool = createPool({
 	user: "dev",
 	password: "dev",
 });
-async function getDbConnection() {
-	return await pool.getConnection();
+export async function getDbConnection() {
+	return pool.getConnection();
 }

@@ -25,10 +25,12 @@
 
 <div class="flex">
 	<div class="
+		sticky top-0
 		px-4 py-2
 		bg-sky-900
 		min-w-60 h-screen
 		flex flex-col gap-2
+		shadow-md
 	">
 		<h1 class="py-2 text-xl font-bold">
 			ファミリーレストランチェーン
@@ -36,13 +38,13 @@
 		<a href="/list" class={[`
 			px-4 py-2
 			rounded-full
-			hover:bg-sky-700
+			hover:bg-sky-700 active:bg-black/10
 			transition-all
 		`, listRouteActive]}>一覧</a>
 		<a href="/register" class={[`
 			px-4 py-2
 			rounded-full
-			hover:bg-sky-700
+			hover:bg-sky-700 active:bg-black/10
 			transition-all
 		`, registerRouteActive]}>新規登録</a>
 	</div>
@@ -52,6 +54,7 @@
 		w-6/10
 		bg-sky-900
 		rounded-3xl
+		shadow-xl
 	">
 		{@render children?.()}
 	</div>

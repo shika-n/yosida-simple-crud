@@ -6,8 +6,39 @@
 	input {
 		@apply rounded-md text-black;
 	}
+	input:disabled {
+		@apply bg-gray-400;
+	}
+
+	.data-cell {
+		@apply px-4 py-2 border-t-1 border-l-1 border-white/30;
+	}
+
+	.data-cell.last-col {
+		@apply border-r;
+	}
+
+	.data-cell.last-row {
+		@apply border-b;
+	}
+
+	.icon-button {
+		@apply p-1
+			rounded-full
+			cursor-pointer
+			hover:bg-white/30 active:bg-black/10
+			transition-all;
+	}
 }
 
 .active {
 	@apply bg-orange-600 hover:bg-orange-500 font-bold;
+}
+
+.register-grid {
+	grid-template-columns: repeat(3, 0.5fr) 0.25fr 1fr;
+}
+
+.list-grid {
+	grid-template-columns: repeat(5, 1fr);
 }
