@@ -1,4 +1,3 @@
-CREATE DATABASE family_restaurant;
 USE family_restaurant;
 
 CREATE TABLE restaurants (
@@ -17,7 +16,7 @@ CREATE TABLE restaurants (
 );
 
 -- Seed --
-INSERT INTO restaurants(
+INSERT INTO restaurants (
 	name,
 	address,
 	telephone,
@@ -40,8 +39,8 @@ INSERT INTO restaurants(
 	TRUE,
 	TRUE,
 	30,
-	00:00,
-	24:00
+	"00:00",
+	"24:00"
 ), (
 	"First Branch",
 	"Branchy St.",
@@ -52,8 +51,8 @@ INSERT INTO restaurants(
 	TRUE,
 	FALSE,
 	0,
-	07:00,
-	23:00
+	"07:00",
+	"23:00"
 ), (
 	"Main Branch",
 	"Main St.",
@@ -64,6 +63,6 @@ INSERT INTO restaurants(
 	FALSE,
 	TRUE,
 	30,
-	09:00,
-	01:00
+	"09:00",
+	"01:00"
 );
