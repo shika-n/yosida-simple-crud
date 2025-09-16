@@ -1,13 +1,11 @@
 import type { Actions } from "./$types";
 import { getDbConnection } from "$lib/db";
-import { warn } from "console";
 
 export const actions = {
 	default: async ({ request }) => {
 		const data = await request.formData();
 
-		const is_barrier_free = data.get("barrier_free") === "free";
-		const is_parking_available = data.get("parking_available") === "true";
+		console.log(typeof data.get("barrier_free"));
 
 		// TODO: checks
 		const db = await getDbConnection();
@@ -33,8 +31,8 @@ export const actions = {
 				data.get("owner"),
 				data.get("area"),
 				data.get("capacity"),
-				is_barrier_free,
-				is_parking_available,
+				data.get("barrier_free") === "true",
+				data.get("parking_available") === "true",
 				data.get("parking_capacity"),
 				data.get("opening_time"),
 				data.get("closing_time"),

@@ -54,12 +54,13 @@
 	<label for="barrier_free_yes">バリアフリー</label>
 	<div class="flex items-center">
 		<input type="radio" id="barrier_free_yes" name="barrier_free"
-			value="true">
+			value={true}
+		>
 		<label for="barrier_free_yes" class="px-2">有</label>
 	</div>
 	<div class="flex items-center">
 		<input type="radio" id="barrier_free_no" name="barrier_free"
-			value="false" checked
+			value={false} checked
 		>
 		<label for="barrier_free_no" class="px-2">無</label>
 	</div>
@@ -69,13 +70,13 @@
 	<label for="parking_available_yes">駐車場</label>
 	<div class="flex items-center">
 		<input type="radio" id="parking_available_yes" name="parking_available"
-			value="true" checked
+			value={true} checked
 		>
 		<label for="parking_available_yes" class="px-2">有</label>
 	</div>
 	<div class="flex items-center">
 		<input type="radio" id="parking_available_no" name="parking_available"
-			value="false">
+			value={false}>
 		<label for="parking_available_no" class="px-2">無</label>
 	</div>
 

@@ -42,3 +42,7 @@
 .list-grid {
 	grid-template-columns: repeat(5, 1fr);
 }
+
+.info-grid div:nth-child(odd) {
+	font-weight: bold;
+}
