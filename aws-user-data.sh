@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
-sudo dnf config-manager addrepo --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
-sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo dnf install -y docker git
+sudo systemctl disable --now docker.service docker.socket
 
-dockerd-rootless-setuptool.sh install
+sudo sh -eux <<EOF
+# Load nf_tables module
+modprobe nf_tables
+EOF
+
+curl https://get.docker.com/rootless | sudo -u ec2-user sh
 sudo loginctl enable-linger $(whoami)
 
 sudo setcap cap_net_bind_service=ep $(which rootlesskit)
