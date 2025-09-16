@@ -1,6 +1,11 @@
 name: cloud-kadai
 
 services:
+  web:
+    build: .
+  ports:
+    - 80:5173
+
   mysql:
     image: mysql:9.4.0
     ports:
