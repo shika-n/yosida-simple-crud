@@ -30,7 +30,9 @@
 		</div>
 		<div class={["data-cell", lastRowClass, evenClass]}>{entry.owner}</div>
 		<form method="POST" class={[
-			"data-cell flex items-center gap-2 last-col min-w-36",
+			`data-cell last-col
+			flex justify-center items-center gap-2
+			min-w-28`,
 			lastRowClass, evenClass
 		]}>
 			<input type="hidden" name="id" value={entry.id}>
