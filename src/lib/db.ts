@@ -1,11 +1,17 @@
-import mysql, { createPool } from "mysql2/promise";
+import { createPool } from "mysql2/promise";
+import { getParam } from "./aws/params";
 
 const pool = createPool({
-	host: "localhost",
 	port: 3306,
 	database: "family_restaurant",
-	user: "dev",
-	password: "dev",
+
+	// host: "localhost",
+	// user: "dev",
+	// password: "dev",
+
+	host: (await getParam("/rk/prod/mysql/host", false)).Parameter?.Value,
+	user: (await getParam("/rk/prod/mysql/dbuser", false)).Parameter?.Value,
+	password: (await getParam("/rk/prod/mysql/dbpass", true)).Parameter?.Value,
 });
 export async function getDbConnection() {
 	return pool.getConnection();
