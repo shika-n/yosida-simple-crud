@@ -6,7 +6,7 @@ services:
     ports:
       - 80:3000
     volumes:
-      - ~/.aws/configure:~/.aws/configure:ro
+      - ~/.aws/credentials:~/.aws/credentials:ro
 
   mysql:
     image: mysql:9.4.0
