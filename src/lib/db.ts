@@ -9,9 +9,9 @@ const pool = createPool({
 	// user: "dev",
 	// password: "dev",
 
-	host: (await getParam("/rk/prod/mysql/host", false)).Parameter?.Value,
-	user: (await getParam("/rk/prod/mysql/dbuser", false)).Parameter?.Value,
-	password: (await getParam("/rk/prod/mysql/dbpass", true)).Parameter?.Value,
+	host: (await getParam("/rk/prod/mysql/host", false))?.Parameter?.Value,
+	user: (await getParam("/rk/prod/mysql/dbuser", false))?.Parameter?.Value,
+	password: (await getParam("/rk/prod/mysql/dbpass", true))?.Parameter?.Value,
 });
 export async function getDbConnection() {
 	return pool.getConnection();

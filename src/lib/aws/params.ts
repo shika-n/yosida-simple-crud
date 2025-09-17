@@ -5,11 +5,15 @@ const ssmClient = new SSMClient({
 });
 
 export async function getParam(key: string, isEncrypted: boolean) {
-	const cmd = new GetParameterCommand({
-		Name: key,
-		WithDecryption: isEncrypted,
-	});
+	try {
+		const cmd = new GetParameterCommand({
+			Name: key,
+			WithDecryption: isEncrypted,
+		});
 
-	const result = await ssmClient.send(cmd);
-	return result;
+		const result = await ssmClient.send(cmd);
+		return result;
+	} catch (e) {
+		return null;
+	}
 }
