@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@aws-sdk/client-ssm':
+        specifier: ^3.888.0
+        version: 3.888.0
       mysql2:
         specifier: ^3.14.5
         version: 3.14.5

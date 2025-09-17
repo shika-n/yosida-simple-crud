@@ -43,6 +43,7 @@
 		]
 	},
 	"dependencies": {
+		"@aws-sdk/client-ssm": "^3.888.0",
 		"mysql2": "^3.14.5",
 		"svelte-hero-icons": "^5.2.0"
 	}
