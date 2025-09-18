@@ -3,7 +3,7 @@
 AWS課題
 
 ## インフラ図
-[Infra](images/aws_rk_infra.png)
+![Infra](images/aws_rk_infra.png)
 
 ## セットアップ
 WebとDBのインスタンスでこのレポジトリをclone
