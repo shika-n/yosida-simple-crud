@@ -14,6 +14,7 @@ export async function getParam(key: string, isEncrypted: boolean) {
 		const result = await ssmClient.send(cmd);
 		return result;
 	} catch (e) {
+		console.log("Param error:", e);
 		return null;
 	}
 }
