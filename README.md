@@ -12,6 +12,10 @@ git clone https://github.com/shika-n/yosida-simple-crud
 cd yosida-simple-crud
 ```
 
+> [!TIP]
+> `aws-user-data.sh`に書いてあるコードをインスタンスのユーザーデータで実行したら
+> Docker rootless, docker compose, fuse-overlayfs, とgitを自動的にインストールします
+
 ### Webのセットアップ
 #### AWSのアクセスキー
 AWSのSSM (Parameter Store)を使うので`~/.aws/credentials`のファイルが必要
