@@ -15,10 +15,10 @@ EOF
 curl https://get.docker.com/rootless | sudo -u ec2-user sh
 
 # Don't logout user when exiting terminal
-sudo loginctl enable-linger $(ec2-user)
+sudo loginctl enable-linger ec2-user
 
 # Enable binding privileged ports
-sudo setcap cap_net_bind_service=ep $(/home/ec2-user/bin/rootlesskit)
+sudo setcap cap_net_bind_service=ep /home/ec2-user/bin/rootlesskit
 
 # Install docker-compose plugin
 sudo mkdir -p /usr/local/lib/docker/cli-plugins
